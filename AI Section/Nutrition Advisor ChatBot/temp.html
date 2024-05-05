@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: 'Verdana', sans-serif;
+        background-color: #ecf0f1;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        background-color: #2c3e50;
+        color: white;
+        font-size: 2.5em;
+        margin: 0;
+        padding: 14px;
+        text-align: center;
+      }
+      h3 {
+        color: #333;
+        font-size: 18px;
+        margin-top: 5px;
+        text-align: center;
+      }
+      #chatbox {
+        margin: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-y: scroll;
+        max-height: 300px;
+      }
+      #userInput {
+        margin: 0 20px 20px 20px;
+        text-align: center;
+      }
+      #textInput {
+        width: 70%;
+        padding: 10px;
+        border: 2px solid #2c3e50;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #2c3e50;
+      }
+      .userText {
+        color: #333;
+        font-size: 16px;
+        text-align: right;
+        margin: 10px 0;
+      }
+      .userText span {
+        background-color: #2c3e50;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .botText {
+        color: #333;
+        font-size: 16px;
+        text-align: left;
+        margin: 10px 0;
+      }
+      .botText span {
+        background-color: #e67e22;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+    </style>
+</head>
+<body>
+    <h1>
+        Nutrition Advisor ChatBot
+    </h1>
+    <div id="chatbox"></div>
+    <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Type your message here" />
+    </div>
+    <script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+    </script>
+</body>
+</html>
