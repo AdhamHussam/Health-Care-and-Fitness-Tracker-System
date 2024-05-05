@@ -1,0 +1,118 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up" , "Good morning" , "Good evening" , "hello" , "hey" , "what's up"],
+     "responses": ["Hello!", "Good to see you!", "Hi there, how can I help?"],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","bye","i have to go","gotta go"],
+     "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+     "context_set": ""
+    },
+    {"tag": "age",
+     "patterns": ["how old", "how old are you", "what is your age", "how old are you", "age?"],
+     "responses": ["I am old and wise", "trying to stay fit and young!"],
+     "context_set": ""
+    },
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you?"],
+     "responses": ["You can call me Nutrition Advisor ChatBot.", "I'm Nutrition Advisor ChatBot!", "I'm Nutrition Advisor ChatBot."],
+     "context_set": ""
+    },
+    {"tag": "help",
+     "patterns": ["Id like to ask something", "what can you do", "can you help me?", "can i tell you something"],
+     "responses": ["I'm here to help you!", "I can help you with whatever you tell me to."],
+     "context_set": ""
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Thank you", "Thanks", "Appreciate it"],
+        "responses": ["You're welcome! If you need further assistance, just let me know."]
+    },
+    {
+        "tag": "nutrition_info",
+        "patterns": ["Tell me about nutrition", "What is a balanced diet?", "Nutritional information"],
+        "responses": ["Nutrition is the process of providing or obtaining the food necessary for health and growth. A balanced diet includes a variety of foods to ensure you get all the essential nutrients."]
+    },
+    {
+        "tag": "calorie_intake",
+        "patterns": ["How many calories should I consume?", "Calculate my daily calorie needs", "Recommended calorie intake"],
+        "responses": ["Calorie needs vary, but a general guideline is around 2000 calories per day for adults. However, individual requirements depend on factors like age, gender, weight, and activity level."]
+    },
+    {
+        "tag": "meal_plan", 
+        "patterns": ["Can you suggest a meal plan?", "Give me a healthy meal idea", "Meal suggestions"],
+        "responses": ["Sure! For a balanced meal, include a mix of lean proteins, whole grains, fruits, and vegetables. How about grilled chicken with quinoa and a side of steamed broccoli?"]
+    },
+    {
+        "tag": "special_diets",
+        "patterns": ["Tell me about the keto diet", "Vegetarian diet benefits", "Gluten-free options"],
+        "responses": ["The keto diet is low in carbs and high in fats, promoting ketosis. A vegetarian diet emphasizes plant-based foods, and gluten-free options exclude gluten-containing grains like wheat."]
+    },
+    {
+        "tag": "allergies",
+        "patterns": ["Dealing with food allergies", "Common allergens", "What to avoid with allergies"],
+        "responses": ["If you have allergies, it's crucial to identify and avoid allergens. Common allergens include peanuts, tree nuts, dairy, and shellfish. Consult with a healthcare professional for personalized advice."]
+    },
+    {
+        "tag": "nutrition_benefits",
+        "patterns": ["What are the benefits of a balanced diet?", "Why is nutrition important?", "Advantages of healthy eating"],
+        "responses": ["A balanced diet provides essential nutrients for overall health. It supports energy levels, helps maintain a healthy weight, and reduces the risk of chronic diseases."]
+    },
+    {
+        "tag": "protein_sources",
+        "patterns": ["Best sources of protein", "Protein-rich foods", "How to get enough protein"],
+        "responses": ["Good sources of protein include lean meats, poultry, fish, beans, and tofu. Make sure to include a variety of these foods in your diet for optimal protein intake."]
+    },
+    {
+        "tag": "vitamin_sources",
+        "patterns": ["Where can I get vitamins in my diet?", "Best vitamin-rich foods", "Sources of essential vitamins"],
+        "responses": ["Different foods provide various vitamins. For example, citrus fruits are rich in vitamin C, while dairy products and sunlight exposure contribute to vitamin D intake."]
+    },
+    {
+        "tag": "fiber_benefits",
+        "patterns": ["What are the benefits of fiber?", "Foods high in fiber", "Why is fiber important for digestion?"],
+        "responses": ["Fiber promotes digestive health, helps control blood sugar levels, and supports heart health. Whole grains, fruits, vegetables, and legumes are excellent sources of dietary fiber."]
+    },
+    {
+        "tag": "hydration_tips",
+        "patterns": ["How much water should I drink?", "Tips for staying hydrated", "Importance of water intake"],
+        "responses": ["Staying hydrated is crucial for overall health. Aim for about 8 glasses (64 ounces) of water per day, but individual needs may vary. Factors like activity level and climate influence hydration requirements."]
+    },
+    {
+        "tag": "nutrient_deficiency",
+        "patterns": ["Signs of nutrient deficiency", "How to identify nutrient deficiencies", "Common nutrient deficiencies"],
+        "responses": ["Common signs of nutrient deficiency include fatigue, weakness, and skin issues. If you suspect a deficiency, consult with a healthcare professional for proper diagnosis and guidance."]
+    },
+    {
+        "tag": "carb_sources",
+        "patterns": ["Healthy sources of carbohydrates", "Complex carbs vs. simple carbs", "Carbohydrate-rich foods"],
+        "responses": ["Healthy sources of carbohydrates include whole grains, legumes, fruits, and vegetables. Differentiate between complex carbs (whole grains) and simple carbs (sugar) for better nutritional choices."]
+    },
+      {
+        "tag": "healthy_fats",
+        "patterns": ["Types of healthy fats", "Best sources of omega-3 fatty acids", "Why are fats important?"],
+        "responses": ["Include sources of healthy fats in your diet, such as avocados, nuts, and olive oil. Omega-3 fatty acids, found in fatty fish like salmon, support heart health and brain function."]
+      },
+      {
+        "tag": "portion_control",
+        "patterns": ["How to practice portion control", "Benefits of mindful eating", "Avoiding overeating"],
+        "responses": ["Practice portion control by using smaller plates, listening to your body's hunger cues, and savoring each bite. Mindful eating promotes better digestion and helps prevent overeating."]
+      },
+      {
+        "tag": "sugar_effects",
+        "patterns": ["Effects of excessive sugar consumption", "Reducing added sugar in the diet", "Health risks of too much sugar"],
+        "responses": ["Excessive sugar intake is linked to health issues like obesity and diabetes. Be mindful of added sugars in processed foods and opt for natural sources like fruits to satisfy your sweet tooth."]
+      },
+      {
+        "tag": "supplements_guide",
+        "patterns": ["Guide to nutritional supplements", "When to take supplements", "Essential supplements for a balanced diet"],
+        "responses": ["Nutritional supplements can complement a balanced diet. Consult with a healthcare professional to determine if you need supplements and which ones may be suitable for your specific needs."]
+      },
+      {
+        "tag": "fitness_nutrition",
+        "patterns": ["Nutrition tips for fitness enthusiasts", "Pre and post-workout nutrition", "Balancing diet with exercise"],
+        "responses": ["For optimal fitness, fuel your body with a combination of carbohydrates and protein before workouts. After exercise, prioritize protein for muscle recovery. Stay hydrated throughout your workout."]
+      }
+]
+}
